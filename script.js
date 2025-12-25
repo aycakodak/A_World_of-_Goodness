@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 // Sayfa yüklendiğinde çalışması için her şeyi bir fonksiyon içine alıyoruz
@@ -69,3 +70,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+=======
+// 1. Sekmeleri ve Formları Tanımlama
+const tabLogin = document.getElementById('tab-login');
+const tabRegister = document.getElementById('tab-register');
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+
+// --- SEKME DEĞİŞTİRME MANTIĞI ---
+tabRegister.onclick = () => {
+    loginForm.classList.add('hidden');      // Girişi gizle
+    registerForm.classList.remove('hidden'); // Kaydı göster
+    tabRegister.classList.add('active');
+    tabLogin.classList.remove('active');
+};
+
+tabLogin.onclick = () => {
+    registerForm.classList.add('hidden');   // Kaydı gizle
+    loginForm.classList.remove('hidden');    // Girişi göster
+    tabLogin.classList.add('active');
+    tabRegister.classList.remove('active');
+};
+
+// --- BACKEND BAĞLANTISI ---
+
+// KAYIT OLMA
+registerForm.onsubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch('/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            email: document.getElementById('reg-email').value,
+            password: document.getElementById('reg-password').value
+        })
+    });
+    alert(await res.text()); // "Başarılı" mesajı gelir
+};
+
+// GİRİŞ YAPMA
+loginForm.onsubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch('/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            email: document.getElementById('login-email').value,
+            password: document.getElementById('login-password').value
+        })
+    });
+    const mesaj = await res.text();
+    alert(mesaj);
+    if(mesaj === "Başarılı") window.location.href = "index.html";
+};
+>>>>>>> 127e58e (Proje yapisi ana dizine tasindi)
