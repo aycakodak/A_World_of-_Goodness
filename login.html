@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>A WORD OF GOODNESS</title>
+</head>
+<body class="login-page">
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" id="home_page">Home Page</a>
+            <a href="#" id="aid_page">Donation</a>
+            <a href="#" id="event_page">Events</a>
+        </div>
+        <div class="center">A WORD OF GOODNESS</div>
+        <div class="nav-right">
+            <a href="login.html" id="login_register">Register</a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="tabs">
+                <button class="tab-btn active" id="tab-login">Giriş Yap</button>
+                <button class="tab-btn" id="tab-register">Kaydol</button>
+            </div>
+
+            <form class="login-form" id="login-form">
+                <div class="input-field">
+                    <label>E-posta Adresi</label>
+                    <div class="input-group">
+                        <span class="icon">✉️</span>
+                        <input type="email" id="login-email" placeholder="E-postanızı giriniz" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>Şifre</label>
+                    <div class="input-group">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="login-password" placeholder="Şifrenizi giriniz" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Giriş Yap</button>
+            </form>
+
+            <form class="login-form hidden" id="register-form">
+                <div class="input-field">
+                    <label>Ad Soyad</label>
+                    <div class="input-group">
+                        <span class="icon">👤</span>
+                        <input type="text" id="reg-name" placeholder="Ad Soyad" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>E-posta</label>
+                    <div class="input-group">
+                        <span class="icon">✉️</span>
+                        <input type="email" id="reg-email" placeholder="E-posta" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>Telefon</label>
+                    <div class="input-group">
+                        <span class="icon">📞</span>
+                        <input type="tel" id="reg-phone" placeholder="Telefon">
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label>Şifre</label>
+                    <div class="input-group">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="reg-password" placeholder="Şifre" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
