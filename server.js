@@ -19,5 +19,16 @@ app.post('/login', (req, res) => {
     if (user) res.send("Başarılı");
     else res.send("Hata tekrar deneyin");
 });
+// STOK DÜŞÜRME ENDPOINT'I
+app.post('/bagis-yap', (req, res) => {
+    const data = JSON.parse(fs.readFileSync('data.json')); // Dosyayı oku
+    if (data.stock > 0) {
+        data.stock -= 1; // Stoktan 1 düşür
+        fs.writeFileSync('data.json', JSON.stringify(data)); // Kaydet
+        res.send(`Bağış başarıyla alındı! Kalan stok: ${data.stock}`);
+    } else {
+        res.send("Üzgünüz, bağış stoğu tükendi.");
+    }
+});
 
 app.listen(3000, () => console.log("Sunucu http://localhost:3000 adresinde hazır!"));
