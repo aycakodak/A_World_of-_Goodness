@@ -271,6 +271,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: rgb(0, 0, 0);
     margin: 1rem 0;
 }
+.stock{
+    margin: 1rem 0;
+   color: rgb(185, 28, 28);
+   
+}
 
 .donation .box-container .box img{
     width: 100%;
@@ -284,6 +289,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px;
     text-decoration: none;
 }
+
 
 
 
