@@ -1,87 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş / Kayıt - Framework Destekli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>A WORD OF GOODNESS</title>
 </head>
-<body class="login-page">
-      <nav class="navbar">
-        
-        <div class="nav-left">
-        <a href="index.html" id="home_page">Home</a>
-        <a href="#" id="aid_page">Donation</a>
-        <a href="#" id="event_page">Events</a>
-        </div>
-        <div class="center">
-            <img src="logo.jpg" alt="Logo" class="logo"> 
-            <span>A WORD OF GOODNESS</span>
-        </div>
-
-        <div class="nav-right"></div>
-        <a href="login.html" id="login_register">Log In</a>
-    </nav>
-
-    <div class="login-container">
-        <div class="login-box">
-            <div class="tabs">
-                <button class="tab-btn active" id="tab-login">Log In</button>
-                <button class="tab-btn" id="tab-register">Sign Up</button>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-white border-0 pt-4">
+                        <ul class="nav nav-pills nav-fill" id="pills-tab">
+                            <li class="nav-item"><a class="nav-link active" id="tab-login" href="#">Giriş Yap</a></li>
+                            <li class="nav-item"><a class="nav-link" id="tab-register" href="#">Kaydol</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label class="form-label">E-posta</label>
+                                <input type="email" id="login-email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Şifre</label>
+                                <input type="password" id="login-password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                        </form>
+                        <form id="register-form" class="d-none">
+                            <div class="mb-3">
+                                <label class="form-label">E-posta</label>
+                                <input type="email" id="reg-email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Şifre</label>
+                                <input type="password" id="reg-password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <form class="login-form" id="login-form">
-                <div class="input-field">
-                    <label>E-mail Address</label>
-                    <div class="input-group">
-                        <span class="icon">✉️</span>
-                        <input type="email" id="login-email" placeholder="Enter your E-mail" required>
-                    </div>
-                </div>
-                <div class="input-field">
-                    <label>Password</label>
-                    <div class="input-group">
-                        <span class="icon">🔒</span>
-                        <input type="password" id="login-password" placeholder="Enter your password" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn-submit">Log In</button>
-            </form>
-
-            <form class="login-form hidden" id="register-form">
-                <div class="input-field">
-                    <label>Name Surname</label>
-                    <div class="input-group">
-                        <span class="icon">👤</span>
-                        <input type="text" id="reg-name" placeholder="Name Surname" required>
-                    </div>
-                </div>
-                <div class="input-field">
-                    <label>E-mail</label>
-                    <div class="input-group">
-                        <span class="icon">✉️</span>
-                        <input type="email" id="reg-email" placeholder="E-mail" required>
-                    </div>
-                </div>
-                <div class="input-field">
-                    <label>Phone Number</label>
-                    <div class="input-group">
-                        <span class="icon">📞</span>
-                        <input type="tel" id="reg-phone" placeholder="Phone Number">
-                    </div>
-                </div>
-                <div class="input-field">
-                    <label>Password</label>
-                    <div class="input-group">
-                        <span class="icon">🔒</span>
-                        <input type="password" id="reg-password" placeholder="Password" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn-submit">Sing Up</button>
-            </form>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
